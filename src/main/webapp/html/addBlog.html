@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加博客</title>
+    <script src="../plugins/wangEditor-3.1.1/release/wangEditor.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/core.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+
+</head>
+<body>
+<div id="blog" class="container" style="margin-top: 50px">
+    <div class="input-group">
+        <span class="input-group-addon">标题</span>
+        <input type="text" class="form-control" placeholder="输入标题" id="title">
+    </div>
+    <div>
+        <textarea rows=3 style="width: 100%"  placeholder="输入描述" id="description"></textarea>
+    </div>
+
+<div id="div1">
+
+</div>
+    <div >
+        <button type="button" class="btn btn-lg btn-block" id="btn1">发表博客</button>
+        <button type="button" class="btn btn-lg btn-block" id="btn2"  onclick="self.location=document.referrer;">取消</button>
+    </div>
+</div>
+<script src="../js/forCookie.js"></script>
+<script src="../js/sendBlog.js"></script>
+</body>
+</html>
