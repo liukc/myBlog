@@ -11,6 +11,7 @@ import java.time.format.DateTimeFormatter;
 
 public class ArticleService {
     private static DateTimeFormatter fmt = DateTimeFormatter.ISO_LOCAL_DATE;
+
     public static JSONArray dialy(String type) throws Exception {
         ArticleDao articleDao = new ArticleDao();
         DatabaseDao databaseDao = new DatabaseDao();
@@ -54,4 +55,22 @@ var arr = {
         JSONObject jsonObject = JSONObject.fromObject(articleDao.showBlog(id,databaseDao));
         return jsonObject;
     }
+
+    /*
+     *@param type:查询的博客类型
+     * @param page：将要查询的页数
+     * @return 返回json数组
+     *
+     * 每一页为 6 条数据
+     */
+    public static JSONArray pagination(String type, String page) throws Exception {
+        ArticleDao articleDao = new ArticleDao();
+        DatabaseDao databaseDao = new DatabaseDao();
+
+        JSONArray jsonArray = JSONArray.fromObject(articleDao.pagedisplay(type, page, databaseDao));
+
+        return jsonArray;
+
+    }
+
 }

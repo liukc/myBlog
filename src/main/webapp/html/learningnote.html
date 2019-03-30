@@ -223,16 +223,15 @@
     </div>
 </section>
 <div style="text-align: center">
-    <ul class="pagination">
-        <li><a href="#">&laquo;</a></li>
-        <li class="active"><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">&raquo;</a></li>
-    </ul>
+    <ul class="pagination" id="page">
+        <li><a href="javascript:changePage('first');">|&laquo;</a></li>
+        <li><a href="javascript:changePage('prev');">&laquo;</a></li>
 
+        <li class="disabled"><a href="#" id="PNumber"></a></li>
+
+        <li><a href="javascript:changePage('next');">&raquo;</a></li>
+        <li><a href="javascript:changePage('end');">&raquo;|</a></li>
+    </ul>
 </div>
 <hr color="grey">
 <div style="text-align: center;margin: 40px">
@@ -249,7 +248,7 @@
         });
     });
 </script>
-<script src="../js/displayArticle.js"></script>
+<script src="../js/pagination.js"></script>
 <script src="../js/forCookie.js"></script>
 
 </body>

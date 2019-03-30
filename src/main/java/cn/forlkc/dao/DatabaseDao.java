@@ -75,7 +75,7 @@ public class DatabaseDao {
     public Integer getCount(String sql) throws SQLException{//查询符合条件的记录的数目
         query(sql);
         while (next()) {
-            return this.getRs().getInt("count1");
+            return this.getRs().getInt("count");
         }
         return 0;
     }

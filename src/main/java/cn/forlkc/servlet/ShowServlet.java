@@ -25,10 +25,8 @@ public class ShowServlet extends HttpServlet {
         }finally {
             jsonObject.put("status",status);
             jsonObject.put("desc",desc);
-
             response.getWriter().write(jsonObject.toString());
         }
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

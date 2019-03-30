@@ -8,8 +8,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter(filterName = "LoginFilter",dispatcherTypes = {DispatcherType.REQUEST,DispatcherType.FORWARD,DispatcherType.INCLUDE
-},urlPatterns = {"/blog/html/addBlog.html"})
+
+@javax.servlet.annotation.WebFilter(filterName = "LoginFilter",dispatcherTypes = {DispatcherType.REQUEST,DispatcherType.FORWARD,
+        DispatcherType.INCLUDE,DispatcherType.ERROR},urlPatterns = {"/blog/html/addBlog.html"})
 public class LoginFilter implements Filter {
     private FilterConfig config = null;
     private String webRoot = null;

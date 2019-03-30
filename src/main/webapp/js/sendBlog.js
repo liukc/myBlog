@@ -1,9 +1,9 @@
 //创建编辑器
 var E = window.wangEditor;
-var editor = new E('#div1');
+var editor = new E('#div1','#div2');  // 两个参数也可以传入 elem 对象，class 选择器
 //editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
 editor.customConfig.uploadImgServer = '/blog/cn.forlkc.servlet/FileServlet';  // 上传图片到服务器
-var imgUrl = '/blog/image/1.jpg';
+var imgUrl = '/blog/images/1.jpg';
 function a (){
     imgUrl = '/blog/images/1.jpg';
 }
@@ -32,7 +32,7 @@ editor.customConfig.customUploadImg = function (files, insert) {//对上传的�
 
 }
 
-editor.create()
+editor.create();
 
 //获取search词
 function GetRequest() {
